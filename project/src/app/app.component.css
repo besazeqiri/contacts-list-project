@@ -1,0 +1,25 @@
+mat-sidenav-container {
+  height: calc(205vh - 115vh);
+}
+
+mat-sidenav {
+  width: 200px;
+  background-color: white;
+}
+
+h2 {
+  margin-left: 30px;
+  font-style: bold;
+  color: white;
+}
+
+button {
+  background-color: #003cb3;
+  border: none;
+  color: white;
+}
+
+a {
+  color: black;
+  font-size: 18px;
+}

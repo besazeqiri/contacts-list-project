@@ -1,0 +1,20 @@
+<h2>Contact List!</h2>
+<p>You have {{contacts?.length}} contacts</p>
+
+<mat-list role="list">
+  <mat-list-item role="listitem" *ngFor="let item of contacts">
+    <img src="{{ item?.avatar }}" style="width:25px" alt="" />
+    <span class="edit btn-success btn-sm btn" routerLink="/contact_details/{{ item.id }}">
+      {{ item.first_name }} {{ item.last_name }}
+    </span>
+  </mat-list-item>
+</mat-list>
+<br>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="New Contact" [(ngModel)]="addMe" name="addMe" required="">
+  </mat-form-field>
+  <button mat-button (click)="addContact()">
+    <mat-icon>add_circle_outline</mat-icon>
+  </button>
+</form>

@@ -1,0 +1,33 @@
+h2 {
+    margin-left: 40px;
+    margin-top: 20px;
+    color: black;
+}
+
+p {
+    color: gray;
+    margin-left: 40px;
+    margin-top: -10px;
+}
+
+mat-list {
+    margin-left: 40px;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin-left: 40px;
+}
+
+button {
+    margin-left: 20px;
+    border: none;
+    background-color: white;
+}
+
+img {
+    border-radius: 40px;
+    width: 25px;
+}
