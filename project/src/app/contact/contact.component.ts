@@ -40,7 +40,7 @@ export class ContactComponent implements OnInit {
     }
     this.apiService.addContact(contact).subscribe(data => {
       console.log(contact);
+      this.getContacts();
     });
-    this.ngOnInit();
   }
 }

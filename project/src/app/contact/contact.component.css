@@ -31,3 +31,7 @@ img {
     border-radius: 40px;
     width: 25px;
 }
+
+span{
+    cursor: pointer;
+}
