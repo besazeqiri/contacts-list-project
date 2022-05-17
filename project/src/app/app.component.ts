@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'project';
+  color = 'red';
+
+
 
   opened = false;
+
+  toggleSidebar() {
+    this.opened = !this.opened;
+
+  }
 }

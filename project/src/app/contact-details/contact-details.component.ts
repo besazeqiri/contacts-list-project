@@ -30,7 +30,8 @@ export class ContactDetailsComponent implements OnInit {
 
   constructor(private apiService: ApiService, private activatedRoute: ActivatedRoute, private fb: FormBuilder) {
     this.addresForm = this.fb.group({
-      adresa: this.fb.array([])});
+      adresa: this.fb.array([])
+    });
     this.addresForm2 = this.fb.array([]);
   }
 
@@ -39,7 +40,8 @@ export class ContactDetailsComponent implements OnInit {
     console.log(this.addresForm["controls"]["adresa"]);
     this.activatedRoute.paramMap.subscribe(params => {
       this.conId = params.get('id');
-      console.log(this.conId);});
+      console.log(this.conId);
+    });
     this.getContacts();
     this.getContact();
     this.getAddressById();
@@ -118,7 +120,7 @@ export class ContactDetailsComponent implements OnInit {
     }
   }
 
-  getContacts(){
+  getContacts() {
     this.apiService.getContacts().subscribe(data => {
       this.contacts = data;
     });
@@ -172,5 +174,5 @@ export class ContactDetailsComponent implements OnInit {
       console.log(data);
     });
   }
-  
+
 }

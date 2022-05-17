@@ -18,24 +18,21 @@
       <!-- <pre>{{adres["controls"] | json }}</pre> -->
       <div [formGroupName]="i">
         <p>Address #{{i+1}}</p>
-        <br>
-
         <mat-form-field class="example-form-field" style="display: none;">
           <mat-label>id</mat-label>
           <input matInput type="text" formControlName="id" class="form-control" required="">
         </mat-form-field>
-        <br>
-
         <mat-form-field class="example-form-field" style="display: none;">
           <mat-label>contactid</mat-label>
           <input matInput type="text" formControlName="contactId" class="form-control" required="">
         </mat-form-field>
-        <br>
         <mat-form-field class="example-form-field">
           <mat-label>Street1</mat-label>
-          <button class="close" (click)="removeAdres(i)" style="margin-left: 200px;" mat-button>X</button>
           <input matInput type="text" formControlName="street1" class="form-control" required="">
         </mat-form-field>
+        <button class="close" (click)="removeAdres(i)" mat-button>
+          <mat-icon>close</mat-icon>
+        </button>
         <br>
         <mat-form-field class="example-form-field">
           <mat-label>Street2</mat-label>

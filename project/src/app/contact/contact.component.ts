@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from '../api.service';
 import { Contact } from './contacts';
 
-
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -26,7 +25,6 @@ export class ContactComponent implements OnInit {
     this.getContacts();
   }
 
-
   getContact() {
     this.apiService.getContact(this.contactId).subscribe(data => {
       this.contact = data;
@@ -43,6 +41,6 @@ export class ContactComponent implements OnInit {
     this.apiService.addContact(contact).subscribe(data => {
       console.log(contact);
     });
-    this.getContacts();
+    this.ngOnInit();
   }
 }

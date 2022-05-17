@@ -18,6 +18,8 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
+import { SidebarModule } from 'ng-sidebar';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 
 @NgModule({
@@ -43,7 +45,9 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
     MatSidenavModule,
     MatSelectModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSlideToggleModule,
+    SidebarModule.forRoot()
   ],
 
   providers: [],

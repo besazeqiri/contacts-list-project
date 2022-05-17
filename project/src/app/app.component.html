@@ -1,18 +1,18 @@
 <mat-toolbar style="background-color: #003cb3;">
   <mat-toolbar-row>
-    <button mat-button (click)="opened=!opened">
-      <mat-icon>menu</mat-icon>
+    <button mat-icon-button>
+      <mat-icon (click)="opened=!opened">menu</mat-icon>
     </button>
     <h2>Angular Task</h2>
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-sidenav-container>
-  <mat-sidenav [(opened)]="opened" mode="side">
+  <mat-sidenav [(opened)]="opened" mode="over">
     <mat-list>
-      <mat-list-item><a routerLink="/" style="text-decoration: none;">
+      <mat-list-item><a routerLink="/" (click)="toggleSidebar();" style="text-decoration: none;">
           <mat-icon>home</mat-icon> Home
         </a></mat-list-item>
-      <mat-list-item><a routerLink="/contact" style="text-decoration: none;">
+      <mat-list-item><a routerLink="/contact" (click)="toggleSidebar()" style="text-decoration: none;">
           <mat-icon>contacts</mat-icon> Contacts
         </a></mat-list-item>
     </mat-list>
